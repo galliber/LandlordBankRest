@@ -50,10 +50,10 @@ public class BankAccountRepositoryImpl implements BankAccountRepository {
     public void updateBankAccount(int id, BankAccount bankAccount) {
         try(Session session=sessionFactory.openSession()){
             session.beginTransaction();
-            BankAccount bankAccount1ToChange=session.get(BankAccount.class, id);
+            BankAccount bankAccountToChange=session.get(BankAccount.class, id);
 
-            bankAccount1ToChange.setBalance(bankAccount.getBalance());
-            bankAccount1ToChange.setIban(bankAccount.getIban());
+            bankAccountToChange.setBalance(bankAccount.getBalance());
+            bankAccountToChange.setIban(bankAccount.getIban());
 
             session.getTransaction().commit();
         }catch (Exception e){

@@ -19,6 +19,12 @@ public class BankAccount {
     @Column(name = "balance")
     private float balance;
 
+    @Column(name = "card_number")
+    private String cardNumber;
+
+    @Column(name = "security_nuber")
+    private int securityNumber;
+
     @OneToMany(mappedBy = "sender")
     private List<Transactions> sender;
 

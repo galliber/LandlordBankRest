@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.hibernate.cfg.Configuration;
 
 @SpringBootApplication
-public class LandlordBankrestApplication {
+public class LandlordBankRestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LandlordBankrestApplication.class, args);
+        SpringApplication.run(LandlordBankRestApplication.class, args);
     }
 
     @Bean
